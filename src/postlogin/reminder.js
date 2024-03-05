@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import moment from 'moment';
-import './reminderform.css';
 
 const ReminderForm = ({ setReminder }) => {
     const [reminderDate, setReminderDate] = useState('');
@@ -17,25 +16,24 @@ const ReminderForm = ({ setReminder }) => {
             setMessage('Please enter a valid date (YYYY-MM-DD).');
         }
     };
-
     const handleClear = () => {
         setReminderDate('');
         setMessage('');
     };
 
     return (
-        <form onSubmit={handleSubmit} className="reminder-form">
-            <label htmlFor="reminderDate" className="label">Reminder Date:</label>
+        <form onSubmit={handleSubmit} style={{ margin: '20px', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
+            <label htmlFor="reminderDate" style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Reminder Date:</label>
             <input
                 id="reminderDate"
                 type="date"
                 value={reminderDate}
                 onChange={e => setReminderDate(e.target.value)}
-                className="input-field"
+                style={{ width: '100%', padding: '5px', marginBottom: '10px', border: '1px solid #ccc', borderRadius: '3px' }}
             />
-            <button type="submit" className="submit-button">Set Reminder</button>
-            <button type="button" onClick={handleClear} className="clear-button">Clear</button>
-            {message && <p className="message">{message}</p>}
+            <button type="submit" style={{ padding: '5px 10px', marginRight: '10px', border: 'none', borderRadius: '3px', cursor: 'pointer' }}>Set Reminder</button>
+            <button type="button" onClick={handleClear} style={{ padding: '5px 10px', border: 'none', borderRadius: '3px', cursor: 'pointer' }}>Clear</button>
+            {message && <p style={{ marginTop: '10px', color: 'green', fontWeight: 'bold' }}>{message}</p>}
         </form>
     );
 };

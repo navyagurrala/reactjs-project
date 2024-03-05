@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import TaskForm from "./addtask"
 
 
 
@@ -11,9 +12,7 @@ const Postnavbar=()=>{
         remindernavigate("/reminder")
     }
 
-    const tasklist=()=>{
-        remindernavigate("/tasklist")
-    }
+  
     return(
          <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor:"blue"}}>
@@ -29,9 +28,7 @@ const Postnavbar=()=>{
       <li className="nav-item active">        
       <a className="nav-link" href="#">ADD TASK</a>
       </li>
-      <li className="nav-item active">        
-      <a  onClick={tasklist} className="nav-link" href="#">TASK-LIST</a>
-      </li>
+      
       <li className="nav-item active">        
       <a onClick={handlenavigate}  className="nav-link" href="#">SET-REMINDER</a>
       </li>

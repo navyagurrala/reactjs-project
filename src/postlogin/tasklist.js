@@ -1,25 +1,22 @@
-
 import React from 'react';
 
 const TaskList = ({ tasks }) => {
-    console.log(tasks);
     return (
         <div>
-            <h2>Tasks</h2>
             {tasks && tasks.length > 0 ? (
                 <ul>
-                    {tasks.map((task) => (
-                        <li key={task.id}>
-                            {task.title} - {task.description} - {task.dueDate}
-                        </li>
+                    {tasks.map((task, index) => (
+                        <div key={index} style={{ marginBottom: "10px", padding: "10px", backgroundColor: "#f4f4f4", borderRadius: "5px" }}>
+                            <h3>{task.title}</h3>
+                            <p>{task.description}</p>
+                            <p>Due Date: {task.dueDate}</p>
+                        </div>
                     ))}
                 </ul>
             ) : (
                 <div>No tasks available</div>
             )}
-      </div>
-        
-        );
-    };
-    
-    export default TaskList;
+        </div>
+    );
+};
+export default TaskList;

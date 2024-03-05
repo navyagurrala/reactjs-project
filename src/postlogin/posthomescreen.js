@@ -11,13 +11,11 @@ import TaskList from "./tasklist"
 const Posthomescreen=({addTask,tasks,setReminder})=>{
     return(
         <>
-        
         <Postnavbar/>
         <TaskForm addTask={addTask}/>
-        <ReminderForm  setReminder={setReminder}/>
+        {/* <ReminderForm  setReminder={setReminder}/> */}
         <TaskList  tasks={tasks}/>
         <Footer/>
-
         </>
     )
 }
