@@ -19,11 +19,11 @@ const Navigation=(task)=>{
     return(
         <BrowserRouter>
         <Routes>
-            <Route path="/" Component={Prehomescreen}></Route>
+            {/* <Route path="/" Component={Prehomescreen}></Route>
             <Route path="/registration" Component={Registration}></Route>
             <Route path="/prenavbar" Component={PreNavbar}></Route>
-            <Route path="/login" Component={Login}></Route>s
-            <Route path="/Posthomescreen" Component={Posthomescreen}></Route>
+            <Route path="/login" Component={Login}></Route>s */}
+            <Route path="/" Component={Posthomescreen}></Route>
             <Route path="/abouttask" Component={abouttask}></Route>
             <Route path="/addtask" Component={<TaskForm task={task}/>}></Route>
             <Route path="/reminder" Component={ReminderForm}></Route>
