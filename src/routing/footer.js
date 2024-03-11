@@ -1,20 +1,15 @@
-import React from "react"
-// import "./src/react-bootstrap-icons"
+import React from "react";
 
-
-
-
-const Footer=()=>{
-    return(
+const Footer = () => {
+    return (
         <>
-<footer className="bg-body-tertiary text-center">
-  <div className="text-center p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
-    ©  Copyright:
-    <a className="text-body" href="#"> 2024 Task Manager & Reminder.com</a>
-  </div>
-</footer>
-</>
+            <footer className="bg-body-tertiary text-center" style={{ backgroundColor: "blue", padding: "5px", borderBottom: "1px solid #ccc", borderTop: "1px solid #ccc", marginTop: "2rem" }}>
+                <div className="text-center p-3" style={{ color: "black", fontSize: "24px" }}>
+                    © 2024 Task Manager & Reminder.com
+                </div>
+            </footer>
+        </>
+    );
+};
 
-    )
-}
-export default Footer
+export default Footer;
